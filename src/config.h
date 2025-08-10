@@ -1,4 +1,8 @@
 #include <Arduino.h>
+
+// uncomment the following line to invert your encoders
+//#define INVERT_ENCODERS
+
 const int HORIZONTAL_PB_PIN = A15;
 
 // CC values

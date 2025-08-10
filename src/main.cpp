@@ -5,26 +5,43 @@
 // Instantiate a MIDI over USB interface.
 USBMIDI_Interface midi;
 
+
 CCRotaryEncoder enc1 = {
+#ifdef INVERT_ENCODERS
+    {6, 5},
+#else
     {5, 6}, // pins
+#endif
     {ENCODER_1},         // MIDI address (CC number + optional channel)
     1,      // optional multiplier if the control isn't fast enough
 };
 
 CCRotaryEncoder enc2 = {
+#ifdef INVERT_ENCODERS
+    {27, 26}, // pins
+#else
     {26, 27}, // pins
+#endif
     {ENCODER_2},         // MIDI address (CC number + optional channel)
     1,      // optional multiplier if the control isn't fast enough
 };
 
 CCRotaryEncoder enc3 = {
+#ifdef INVERT_ENCODERS
+    {30, 29}, // pins
+#else
     {29, 30}, // pins
+#endif
     {ENCODER_3},         // MIDI address (CC number + optional channel)
     1,      // optional multiplier if the control isn't fast enough
 };
 
 CCRotaryEncoder enc4 = {
+#ifdef INVERT_ENCODERS
+    {32, 31}, // pins
+#else
     {31, 32}, // pins
+#endif
     {ENCODER_4},         // MIDI address (CC number + optional channel)
     1,      // optional multiplier if the control isn't fast enough
 };
